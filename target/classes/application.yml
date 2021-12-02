@@ -1,0 +1,25 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: parent-root
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driverClassName: com.mysql.jdbc.Driver
+    maxActive: 50
+    maxWait: 20000
+    url: jdbc:mysql://119.3.132.51:3306/bms?allowMultiQueries=true&autoReconnect=true
+    username: root
+    password: root
+    repository: com.lanje.project.parentRoot.dao.repository
+    entity: com.lanje.project.parentRoot.dao.entity
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  redis:
+    database: 0 # 表示使用redis通统一数据库
+    host: 119.3.132.51
+    port: 6379
+    password: Passw0rd
